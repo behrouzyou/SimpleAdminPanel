@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@font-face {
+    font-family: iranBold;
+    src: url("./asset/font/iranyekanwebbold.ttf");
+}
+@font-face {
+    font-family: iranLight;
+    src: url("./asset/font/iranyekanweblight.ttf");
+}
+@font-face {
+    font-family: iranRegular;
+    src: url("./asset/font/iranyekanwebregular.ttf");
+}
+*{
+    font-family: iranRegular;
+    direction: rtl;
+    text-align: right;
+}
+
+
+@theme {
+    --font-irBold:iranBold;
+    --font-irLight:iranLight;
+    --font-irRegular:iranRegular;
+}
