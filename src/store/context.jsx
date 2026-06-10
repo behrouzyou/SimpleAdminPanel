@@ -1,10 +1,11 @@
 import { createContext, useState } from "react";
 import axios from "axios";
-import swal from "sweetalert2";
 import Swal from "sweetalert2";
+import {  useNavigate } from "react-router";
 
 export const AppContext = createContext({});
 const AppContextProvider = ({ children }) => {
+    const navigate=useNavigate()
   const [dark, setDark] = useState(false);
   const [users, setUsers] = useState([])
   const setTheme = () => {
@@ -65,14 +66,18 @@ const updateUser =async(data) => {
             "Content-Type":  'application/json; charset=UTF-8',
         },
 
+
     });
+
     Swal.fire({
         icon:"success",
-        title:res,
+        title:res.data,
         text:" اطلاعات کاربر با موفقیت به روز رسانی شد  "
 
 
     })
+     navigate("/users")
+
     } catch (error) {
 console.log(error);
     }
