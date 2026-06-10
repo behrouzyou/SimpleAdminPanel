@@ -7,9 +7,9 @@ import { AppContext } from "./store/context";
 import { useEffect } from "react";
 
 const App = () => {
-    const{setTheme}=useContext(AppContext)
+    const{setTheme,getUser}=useContext(AppContext)
     useEffect(() => {
-
+        getUser()
         setTheme()
     }, []);
 
