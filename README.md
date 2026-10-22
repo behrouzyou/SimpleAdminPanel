@@ -1,16 +1,46 @@
-# React + Vite
+# Simple Admin Panel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based admin dashboard project with a reusable content area, header, sidebar, theme setup, and user-loading logic. The UI uses a component-oriented layout and includes form and date-handling dependencies useful for Persian-language admin interfaces.
 
-Currently, two official plugins are available:
+## Features visible in the current code
+- Dashboard layout with header and sidebar
+- Shared state through React Context
+- Initial user-loading and theme setup
+- Form support with Formik and Yup
+- Persian/Jalali date utilities
+- Alerts and icons
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech stack
+- React 19
+- Vite
+- Tailwind CSS
+- Axios
+- Formik and Yup
+- jalali-moment
+- SweetAlert2
+- React Icons
 
-## React Compiler
+## Run locally
+Requires Node.js and npm.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+git clone https://github.com/behrouzyou/SimpleAdminPanel.git
+cd SimpleAdminPanel
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Use the local URL printed by Vite. Production commands:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+npm run preview
+```
+
+## Development checks
+```bash
+npm run lint
+npm run build
+```
+
+This repository is a frontend project; API endpoints or authentication services required by the UI must be configured separately if they are not included in this repository.
